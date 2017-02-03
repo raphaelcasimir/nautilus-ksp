@@ -1,10 +1,10 @@
 vesselCount = 4
-UT = 1659418.7401320625
+UT = 2189910.4568560282
 gameMode = CAREER
 gameNull = False
 gameCompatible = True
-funds = 2316327.3397256238
-science = 81
-reputationPercent = 54
+funds = 2769176.2745236806
+science = 35
+reputationPercent = 56
 ongoingContracts = 5
-saveMD5 = 8b9697259e7b826ef7697b921c7d2caf
+saveMD5 = cbb1843263de864cd1d8b4e8f13ac8b5
