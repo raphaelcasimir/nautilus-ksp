@@ -8,7 +8,7 @@ GAME
 	Mode = CAREER
 	Status = 1
 	Seed = 2103930004
-	scene = 7
+	scene = 5
 	editor = None
 	flag = Squad/Flags/esa_dark_blue
 	launchID = 53
@@ -185,7 +185,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 4747486.7927051857
+		update = 4746824.6927199848
 		version = 1.2.2
 		WEIGHTS
 		{
@@ -6300,276 +6300,6 @@ GAME
 			sci = 12
 			cap = 12
 		}
-		Science
-		{
-			id = temperatureScan@KerbinSrfLandedMissionControl
-			title = Temperature Scan from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = crewReport@KerbinSrfLandedMissionControl
-			title = Crew Report from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 1.5
-		}
-		Science
-		{
-			id = barometerScan@KerbinSrfLandedMissionControl
-			title = Atmospheric Pressure Scan from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.60000014
-		}
-		Science
-		{
-			id = mysteryGoo@KerbinSrfLandedMissionControl
-			title = Mystery Goo™ Observation from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.9000001
-		}
-		Science
-		{
-			id = mobileMaterialsLab@KerbinSrfLandedMissionControl
-			title = Materials Study from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 9.60000038
-		}
-		Science
-		{
-			id = evaReport@KerbinSrfLandedMissionControl
-			title = EVA Report from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = surfaceSample@KerbinSrfLandedMissionControl
-			title = Surface Sample from Mission Control
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 12
-		}
-		Science
-		{
-			id = crewReport@KerbinSrfLandedRunway
-			title = Crew Report from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 1.5
-		}
-		Science
-		{
-			id = temperatureScan@KerbinSrfLandedRunway
-			title = Temperature Scan from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = barometerScan@KerbinSrfLandedRunway
-			title = Atmospheric Pressure Scan from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.60000014
-		}
-		Science
-		{
-			id = mysteryGoo@KerbinSrfLandedRunway
-			title = Mystery Goo™ Observation from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.9000001
-		}
-		Science
-		{
-			id = mobileMaterialsLab@KerbinSrfLandedRunway
-			title = Materials Study from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 9.60000038
-		}
-		Science
-		{
-			id = evaReport@KerbinSrfLandedRunway
-			title = EVA Report from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = surfaceSample@KerbinSrfLandedRunway
-			title = Surface Sample from Runway
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 12
-		}
-		Science
-		{
-			id = crewReport@KerbinSrfLandedShores
-			title = Crew Report from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 1.5
-		}
-		Science
-		{
-			id = temperatureScan@KerbinSrfLandedShores
-			title = Temperature Scan from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = barometerScan@KerbinSrfLandedShores
-			title = Atmospheric Pressure Scan from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.60000014
-		}
-		Science
-		{
-			id = mysteryGoo@KerbinSrfLandedShores
-			title = Mystery Goo™ Observation from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 3.9000001
-		}
-		Science
-		{
-			id = mobileMaterialsLab@KerbinSrfLandedShores
-			title = Materials Study from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 9.60000038
-		}
-		Science
-		{
-			id = evaReport@KerbinSrfLandedShores
-			title = EVA Report from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 2.4000001
-		}
-		Science
-		{
-			id = surfaceSample@KerbinSrfLandedShores
-			title = Surface Sample from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.300000012
-			sci = 0
-			cap = 12
-		}
-		Science
-		{
-			id = crewReport@KerbinSrfSplashedShores
-			title = Crew Report from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 2
-		}
-		Science
-		{
-			id = temperatureScan@KerbinSrfSplashedShores
-			title = Temperature Scan from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 3.20000005
-		}
-		Science
-		{
-			id = barometerScan@KerbinSrfSplashedShores
-			title = Atmospheric Pressure Scan from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 4.80000019
-		}
-		Science
-		{
-			id = mysteryGoo@KerbinSrfSplashedShores
-			title = Mystery Goo™ Observation from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 5.20000029
-		}
-		Science
-		{
-			id = mobileMaterialsLab@KerbinSrfSplashedShores
-			title = Materials Study from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 12.8000002
-		}
-		Science
-		{
-			id = surfaceSample@KerbinSrfSplashedShores
-			title = Surface Sample from Kerbin's Shores
-			dsc = 1
-			scv = 1
-			sbv = 0.400000006
-			sci = 0
-			cap = 16
-		}
 	}
 	SCENARIO
 	{
@@ -8232,7 +7962,7 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.2.2
-		UT = 4747495.592704989
+		UT = 4746825.4527199678
 		activeVessel = 14
 		mapViewFiltering = 4106
 		commNetUIModeTracking = Network
@@ -14751,37 +14481,37 @@ GAME
 			pid = 10effc64e231497a85271b135eb9e2d0
 			name = Sciençomobile
 			type = Ship
-			sit = SPLASHED
-			landed = False
-			landedAt = 
-			splashed = True
-			met = 665.01998513564467
-			lct = 4746830.5327198543
-			lastUT = 4747495.592704989
+			sit = PRELAUNCH
+			landed = True
+			landedAt = LaunchPad
+			splashed = False
+			met = 0
+			lct = 4746825.4527199678
+			lastUT = 4746825.4527199678
 			root = 0
-			lat = -0.065447950536143523
-			lon = -74.354892704414013
-			alt = -0.032532214652746916
-			hgt = 161.080368
-			nrm = -0.577064097,0.0196532756,-0.816462636
-			rot = -0.119984791,0.102796152,0.914132893,-0.373360276
-			CoM = 2.92062759E-06,-0.825958908,-0.00429540873
-			stg = 0
+			lat = -0.09724858882605629
+			lon = -74.557661409942895
+			alt = 74.156631884630769
+			hgt = 1.67126179
+			nrm = 0.000656709075,-0.000110170105,-0.999999821
+			rot = -0.000322797714,-0.134029195,-0.0035173425,0.990971148
+			CoM = 0.000937277218,-0.895176291,-0.00282308785
+			stg = 1
 			prst = False
-			ref = 0
+			ref = 384942664
 			ctrl = True
-			cPch = 0.6918228
-			cHdg = 8.748
+			cPch = 0.18
+			cHdg = 0.314
 			cMod = 0
 			ORBIT
 			{
-				SMA = 300783.5044763484
-				ECC = 0.99479039582731055
-				INC = 0.081675325042197461
-				LPE = 53.191741791066264
-				LAN = 253.08009987952178
-				MNA = 3.1414578304404364
-				EPH = 4747495.592704989
+				SMA = 300819.43912008248
+				ECC = 0.99479847881551309
+				INC = 0.097334059860500338
+				LPE = 90
+				LAN = 204.87368998414101
+				MNA = -3.1415926535897887
+				EPH = 4746825.4527199678
 				REF = 1
 			}
 			PART
@@ -14807,9 +14537,9 @@ GAME
 				attN = bottom, 1
 				mass = 0.899999976
 				shielded = False
-				temp = 308.12093735333519
-				tempExt = 308.44335258207633
-				tempExtUnexp = 308.44385466122066
+				temp = 306.75525716898954
+				tempExt = 306.80860013907738
+				tempExtUnexp = 306.80868866338062
 				expt = 0.5
 				state = 0
 				attached = True
@@ -14818,8 +14548,8 @@ GAME
 				flag = Squad/Flags/esa_dark_blue
 				rTrf = oh6cockpit (Sciençomobile)
 				modCost = 0
-				crew = Bob Kerman
 				crew = Bill Kerman
+				crew = Bob Kerman
 				EVENTS
 				{
 				}
@@ -14855,9 +14585,9 @@ GAME
 				{
 					name = ModuleReactionWheel
 					isEnabled = True
-					actuatorModeCycle = 2
+					actuatorModeCycle = 1
 					authorityLimiter = 100
-					stateString = Idle
+					stateString = Active
 					stagingEnabled = True
 					WheelState = Active
 					EVENTS
@@ -14936,8 +14666,8 @@ GAME
 					name = ModuleAnimateGeneric
 					isEnabled = True
 					aniState = LOCKED
-					animSwitch = False
-					animTime = 1
+					animSwitch = True
+					animTime = 0
 					animSpeed = 1
 					deployPercent = 100
 					animationIsDisabled = False
@@ -15045,8 +14775,6 @@ GAME
 					Log
 					{
 						flight = 0
-						0 = Land,Kerbin
-						0 = Flight,Kerbin
 					}
 					UPGRADESAPPLIED
 					{
@@ -15055,7 +14783,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 49.60609545586945
+					amount = 50
 					maxAmount = 50
 					flowState = True
 					isTweakable = True
@@ -15099,9 +14827,9 @@ GAME
 				attN = bottom, 2
 				mass = 0.200000003
 				shielded = False
-				temp = 308.22814522781914
-				tempExt = 308.41080113731368
-				tempExtUnexp = 308.41076923656686
+				temp = 306.75618891904816
+				tempExt = 306.79948634646684
+				tempExtUnexp = 306.8003785208121
 				expt = 0.5
 				state = 0
 				attached = True
@@ -15126,7 +14854,7 @@ GAME
 					aniState = LOCKED
 					animSwitch = True
 					animTime = 0
-					animSpeed = 0
+					animSpeed = 1
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -15210,9 +14938,9 @@ GAME
 				attN = bottom01, 1
 				mass = 0.100000001
 				shielded = False
-				temp = 308.41359346945012
-				tempExt = 308.47588233910705
-				tempExtUnexp = 308.47586199642728
+				temp = 306.75486700555052
+				tempExt = 306.69319202817672
+				tempExtUnexp = 306.6933037830463
 				expt = 0.5
 				state = 0
 				attached = True
@@ -15248,7 +14976,7 @@ GAME
 				RESOURCE
 				{
 					name = LiquidFuel
-					amount = 76.598637911947208
+					amount = 80
 					maxAmount = 80
 					flowState = True
 					isTweakable = True
@@ -15280,11 +15008,11 @@ GAME
 				attN = top, 2
 				mass = 0.25
 				shielded = False
-				temp = 308.53892072958405
-				tempExt = 308.4389758187549
-				tempExtUnexp = 308.43903255950522
+				temp = 306.75465870145075
+				tempExt = 306.6306061459016
+				tempExtUnexp = 306.63090487290384
 				expt = 0.5
-				state = 1
+				state = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -15304,9 +15032,9 @@ GAME
 				{
 					name = ModuleEnginesFX
 					isEnabled = True
-					staged = True
+					staged = False
 					flameout = False
-					EngineIgnited = True
+					EngineIgnited = False
 					engineShutdown = False
 					currentThrottle = 0
 					thrustPercentage = 100
@@ -15403,9 +15131,9 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0780000016
 				shielded = False
-				temp = 308.12427276863349
-				tempExt = 308.49205164382499
-				tempExtUnexp = 308.49207444935075
+				temp = 306.75456146463478
+				tempExt = 306.64862318927851
+				tempExtUnexp = 306.64878128739429
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -15430,8 +15158,8 @@ GAME
 					mirrorDeploy = True
 					usesMirrorDeploy = True
 					ignorePitch = False
-					ignoreYaw = True
-					ignoreRoll = False
+					ignoreYaw = False
+					ignoreRoll = True
 					deploy = False
 					deployInvert = False
 					partDeployInvert = False
@@ -15483,9 +15211,9 @@ GAME
 				srfN = srfAttach, 2
 				mass = 0.0780000016
 				shielded = False
-				temp = 308.12044229254212
-				tempExt = 308.51340470955978
-				tempExtUnexp = 308.51347372926648
+				temp = 306.7556446580528
+				tempExt = 306.88873572048919
+				tempExtUnexp = 306.88931487335367
 				expt = 0.100000001
 				state = 0
 				attached = True
@@ -15510,8 +15238,8 @@ GAME
 					mirrorDeploy = False
 					usesMirrorDeploy = True
 					ignorePitch = False
-					ignoreYaw = True
-					ignoreRoll = False
+					ignoreYaw = False
+					ignoreRoll = True
 					deploy = False
 					deployInvert = False
 					partDeployInvert = False
@@ -15564,9 +15292,9 @@ GAME
 				attN = bottom, 8
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.04455410563713
-				tempExt = 308.49481001963005
-				tempExtUnexp = 308.49490837285509
+				temp = 306.75498719733309
+				tempExt = 306.72777531194225
+				tempExtUnexp = 306.7281083660107
 				expt = 0.5
 				state = 0
 				attached = True
@@ -15614,336 +15342,6 @@ GAME
 							actionGroup = None
 						}
 					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfLandedLaunchPad
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from LaunchPad
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfLandedLaunchPad
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from LaunchPad
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfLandedCrawlerway
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from Crawlerway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfLandedCrawlerway
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from Crawlerway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 13
-						subjectID = mysteryGoo@KerbinSrfLandedCrawlerway
-						xmit = 0.300000012
-						xmitBonus = 1
-						title = Mystery Goo™ Observation from Crawlerway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfLandedMissionControl
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = evaReport@KerbinSrfLandedMissionControl
-						xmit = 1
-						xmitBonus = 1
-						title = EVA Report from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfLandedMissionControl
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 13
-						subjectID = mysteryGoo@KerbinSrfLandedMissionControl
-						xmit = 0.300000012
-						xmitBonus = 1
-						title = Mystery Goo™ Observation from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 12
-						subjectID = barometerScan@KerbinSrfLandedMissionControl
-						xmit = 0.5
-						xmitBonus = 1
-						title = Atmospheric Pressure Scan from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = temperatureScan@KerbinSrfLandedMissionControl
-						xmit = 0.5
-						xmitBonus = 1
-						title = Temperature Scan from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 5
-						subjectID = crewReport@KerbinSrfLandedMissionControl
-						xmit = 1
-						xmitBonus = 1
-						title = Crew Report from Mission Control
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfLandedRunway
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = evaReport@KerbinSrfLandedRunway
-						xmit = 1
-						xmitBonus = 1
-						title = EVA Report from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 13
-						subjectID = mysteryGoo@KerbinSrfLandedRunway
-						xmit = 0.300000012
-						xmitBonus = 1
-						title = Mystery Goo™ Observation from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 12
-						subjectID = barometerScan@KerbinSrfLandedRunway
-						xmit = 0.5
-						xmitBonus = 1
-						title = Atmospheric Pressure Scan from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = temperatureScan@KerbinSrfLandedRunway
-						xmit = 0.5
-						xmitBonus = 1
-						title = Temperature Scan from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfLandedRunway
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 5
-						subjectID = crewReport@KerbinSrfLandedRunway
-						xmit = 1
-						xmitBonus = 1
-						title = Crew Report from Runway
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 5
-						subjectID = crewReport@KerbinSrfLandedKSC
-						xmit = 0
-						xmitBonus = 0
-						title = Crew Report from KSC
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfLandedShores
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = evaReport@KerbinSrfLandedShores
-						xmit = 1
-						xmitBonus = 1
-						title = EVA Report from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 13
-						subjectID = mysteryGoo@KerbinSrfLandedShores
-						xmit = 0.300000012
-						xmitBonus = 1
-						title = Mystery Goo™ Observation from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 12
-						subjectID = barometerScan@KerbinSrfLandedShores
-						xmit = 0.5
-						xmitBonus = 1
-						title = Atmospheric Pressure Scan from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = temperatureScan@KerbinSrfLandedShores
-						xmit = 0.5
-						xmitBonus = 1
-						title = Temperature Scan from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfLandedShores
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 5
-						subjectID = crewReport@KerbinSrfLandedShores
-						xmit = 1
-						xmitBonus = 1
-						title = Crew Report from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 40
-						subjectID = surfaceSample@KerbinSrfSplashedShores
-						xmit = 0.25
-						xmitBonus = 1
-						title = Surface Sample from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 32
-						subjectID = mobileMaterialsLab@KerbinSrfSplashedShores
-						xmit = 0.349999994
-						xmitBonus = 1
-						title = Materials Study from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 13
-						subjectID = mysteryGoo@KerbinSrfSplashedShores
-						xmit = 0.300000012
-						xmitBonus = 1
-						title = Mystery Goo™ Observation from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 12
-						subjectID = barometerScan@KerbinSrfSplashedShores
-						xmit = 0.5
-						xmitBonus = 1
-						title = Atmospheric Pressure Scan from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 8
-						subjectID = temperatureScan@KerbinSrfSplashedShores
-						xmit = 0.5
-						xmitBonus = 1
-						title = Temperature Scan from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
-					ScienceData
-					{
-						data = 5
-						subjectID = crewReport@KerbinSrfSplashedShores
-						xmit = 1
-						xmitBonus = 1
-						title = Crew Report from Kerbin's Shores
-						triggered = False
-						container = 1084971948
-					}
 					UPGRADESAPPLIED
 					{
 					}
@@ -15972,9 +15370,9 @@ GAME
 				attN = bottom01, 6
 				mass = 0.00700000022
 				shielded = False
-				temp = 308.13114982766189
-				tempExt = 308.50179703631392
-				tempExtUnexp = 308.50194803688424
+				temp = 306.75426121889478
+				tempExt = 306.71029112617077
+				tempExtUnexp = 306.71061380588247
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16048,9 +15446,9 @@ GAME
 				attN = bottom, 6
 				mass = 0.00999999978
 				shielded = False
-				temp = 308.1355619014858
-				tempExt = 308.41861752595514
-				tempExtUnexp = 308.41868410817881
+				temp = 306.75275728697903
+				tempExt = 306.69844870183147
+				tempExtUnexp = 306.69869899453096
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16071,7 +15469,7 @@ GAME
 				RESOURCE
 				{
 					name = ElectricCharge
-					amount = 198.4243818234778
+					amount = 200
 					maxAmount = 200
 					flowState = True
 					isTweakable = True
@@ -16102,9 +15500,9 @@ GAME
 				srfN = srfAttach, 6
 				mass = 0.00499999989
 				shielded = False
-				temp = 308.04107480213702
-				tempExt = 308.43154317506355
-				tempExtUnexp = 308.43148397564522
+				temp = 306.75475284288524
+				tempExt = 306.71540958762944
+				tempExtUnexp = 306.71574008844703
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16191,9 +15589,9 @@ GAME
 				srfN = srfAttach, 6
 				mass = 0.00499999989
 				shielded = False
-				temp = 308.12861270422417
-				tempExt = 308.40215048452541
-				tempExtUnexp = 308.40208896594112
+				temp = 306.75403533125035
+				tempExt = 306.7017229985438
+				tempExtUnexp = 306.70203498595293
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16281,9 +15679,9 @@ GAME
 				attN = top, -1
 				mass = 0.100000001
 				shielded = False
-				temp = 308.1655179586167
-				tempExt = 308.38807488655004
-				tempExtUnexp = 308.38801933572057
+				temp = 306.75471905037875
+				tempExt = 306.73753953340747
+				tempExtUnexp = 306.73725735152203
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16402,9 +15800,9 @@ GAME
 				srfN = srfAttach, 11
 				mass = 0.0450000018
 				shielded = False
-				temp = 308.10321844662656
-				tempExt = 308.4689577582443
-				tempExtUnexp = 308.46910994626603
+				temp = 306.75430925772861
+				tempExt = 306.64253516698068
+				tempExtUnexp = 306.64256219612906
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16451,8 +15849,8 @@ GAME
 					isEnabled = True
 					springTweakable = 1
 					damperTweakable = 1
-					suspensionPos = (1.50004907E-05, 0.057130456, 0.947607994)
-					autoBoost = 0.533988833
+					suspensionPos = (-1, -1, -1)
+					autoBoost = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -16522,9 +15920,9 @@ GAME
 					name = ModuleWheelDeployment
 					isEnabled = True
 					shieldedCanDeploy = False
-					stateString = Retracted
+					stateString = 
 					stagingEnabled = True
-					position = 0
+					position = 1
 					EVENTS
 					{
 					}
@@ -16686,9 +16084,9 @@ GAME
 				srfN = srfAttach, 11
 				mass = 0.0450000018
 				shielded = False
-				temp = 308.10171272211704
-				tempExt = 308.43283878392629
-				tempExtUnexp = 308.4328041461896
+				temp = 306.75691101646538
+				tempExt = 307.06584080088362
+				tempExtUnexp = 307.06651872011196
 				expt = 0.5
 				state = 0
 				attached = True
@@ -16735,7 +16133,7 @@ GAME
 					isEnabled = True
 					springTweakable = 1
 					damperTweakable = 1
-					suspensionPos = (2.38418397E-06, 0.0571042299, 0.947600603)
+					suspensionPos = (-1, -1, -1)
 					autoBoost = 0
 					stagingEnabled = True
 					EVENTS
@@ -16806,9 +16204,9 @@ GAME
 					name = ModuleWheelDeployment
 					isEnabled = True
 					shieldedCanDeploy = False
-					stateString = Retracted
+					stateString = 
 					stagingEnabled = True
-					position = 0
+					position = 1
 					EVENTS
 					{
 					}
@@ -16970,9 +16368,9 @@ GAME
 				srfN = srfAttach, 11
 				mass = 0.0450000018
 				shielded = False
-				temp = 308.10867708001405
-				tempExt = 308.53380218347274
-				tempExtUnexp = 308.534158750134
+				temp = 306.75430925773657
+				tempExt = 306.64253516841086
+				tempExtUnexp = 306.64256219755731
 				expt = 0.5
 				state = 0
 				attached = True
@@ -17019,8 +16417,8 @@ GAME
 					isEnabled = True
 					springTweakable = 1
 					damperTweakable = 1
-					suspensionPos = (6.95386689E-06, 0.0571088791, 0.947615266)
-					autoBoost = 0.401993334
+					suspensionPos = (-1, -1, -1)
+					autoBoost = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17090,9 +16488,9 @@ GAME
 					name = ModuleWheelDeployment
 					isEnabled = True
 					shieldedCanDeploy = False
-					stateString = Retracted
+					stateString = 
 					stagingEnabled = True
-					position = 0
+					position = 1
 					EVENTS
 					{
 					}
@@ -17254,9 +16652,9 @@ GAME
 				srfN = srfAttach, 11
 				mass = 0.0450000018
 				shielded = False
-				temp = 308.10191399479646
-				tempExt = 308.43186122829769
-				tempExtUnexp = 308.43182721020389
+				temp = 306.75694852300768
+				tempExt = 307.07269092374236
+				tempExtUnexp = 307.07336777848445
 				expt = 0.5
 				state = 0
 				attached = True
@@ -17303,8 +16701,8 @@ GAME
 					isEnabled = True
 					springTweakable = 1
 					damperTweakable = 1
-					suspensionPos = (4.76836794E-06, 0.0571008921, 0.947612107)
-					autoBoost = 0.653996825
+					suspensionPos = (-1, -1, -1)
+					autoBoost = 0
 					stagingEnabled = True
 					EVENTS
 					{
@@ -17374,9 +16772,9 @@ GAME
 					name = ModuleWheelDeployment
 					isEnabled = True
 					shieldedCanDeploy = False
-					stateString = Retracted
+					stateString = 
 					stagingEnabled = True
-					position = 0
+					position = 1
 					EVENTS
 					{
 					}
@@ -17537,9 +16935,9 @@ GAME
 				srfN = srfAttach, 0
 				mass = 0.0500000007
 				shielded = False
-				temp = 308.04173599800248
-				tempExt = 308.35954673497929
-				tempExtUnexp = 308.35947958841183
+				temp = 306.75470478021197
+				tempExt = 306.73270262449631
+				tempExtUnexp = 306.73248339520097
 				expt = 0.5
 				state = 0
 				attached = True
@@ -17564,7 +16962,7 @@ GAME
 					aniState = LOCKED
 					animSwitch = True
 					animTime = 0
-					animSpeed = 0
+					animSpeed = 1
 					deployPercent = 100
 					animationIsDisabled = False
 					stagingEnabled = True
@@ -17626,12 +17024,12 @@ GAME
 			}
 			ACTIONGROUPS
 			{
-				Stage = True, 4746828.07271991
-				Gear = False, 4747391.03270733
+				Stage = False, 0
+				Gear = True, 0
 				Light = False, 0
 				RCS = False, 0
 				SAS = False, 0
-				Brakes = False, 4747311.23270911
+				Brakes = False, 0
 				Abort = False, 0
 				Custom01 = False, 0
 				Custom02 = False, 0
@@ -18007,10 +17405,6 @@ GAME
 			FLIGHT_LOG
 			{
 				flight = 1
-				1 = Land,Kerbin
-				1 = ExitVessel,Kerbin
-				1 = BoardVessel,Kerbin
-				1 = Flight,Kerbin
 			}
 		}
 		KERBAL
@@ -18065,10 +17459,6 @@ GAME
 			FLIGHT_LOG
 			{
 				flight = 5
-				5 = Land,Kerbin
-				5 = ExitVessel,Kerbin
-				5 = BoardVessel,Kerbin
-				5 = Flight,Kerbin
 			}
 		}
 		KERBAL
