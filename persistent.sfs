@@ -13,8 +13,8 @@ GAME
 	flag = Squad/Flags/esa_dark_blue
 	launchID = 61
 	modded = True
-	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP.x86_64 -single-instance - 
-	versionFull = 1.2.2.1622 (LinuxPlayer)
+	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe  - 
+	versionFull = 1.2.2.1622 (WindowsPlayer x64)
 	versionCreated = 1.2.2.1622 (WindowsPlayer x64)
 	PARAMETERS
 	{
@@ -84,7 +84,7 @@ GAME
 		}
 		CAREER
 		{
-			TechTreeUrl = GameData/ModuleManager.TechTree
+			TechTreeUrl = GameData\ModuleManager.TechTree
 			StartingFunds = 25000
 			StartingScience = 0
 			StartingReputation = 0
@@ -152,6 +152,18 @@ GAME
 			PartUpgradesInSandbox = False
 			PartUpgradesInCareer = True
 		}
+		FMRS_Settings
+		{
+			enabled = True
+			autoactiveAtLaunch = True
+			Timer_Stage_Delay = 0.2
+			_SETTING_Messages = True
+			_SETTING_Auto_Cut_Off = True
+			_SETTING_Auto_Recover = True
+			_SETTING_Throttle_Log = True
+			_SETTING_Parachutes = True
+			_SETTING_Defer_Parachutes_to_StageRecovery = True
+		}
 	}
 	SCENARIO
 	{
@@ -186,7 +198,7 @@ GAME
 	{
 		name = ContractSystem
 		scene = 7, 8, 5, 6
-		update = 68560215.513369083
+		update = -1000
 		version = 1.2.2
 		WEIGHTS
 		{
@@ -206,9 +218,11 @@ GAME
 			CollectScience = 90
 			Eeloo = 30
 			Dres = 30
+			Pol = 30
 			Gilly = 30
 			Tylo = 30
 			Bop = 30
+			Vall = 30
 			Laythe = 30
 			Jool = 30
 			Ike = 32
@@ -3206,7 +3220,7 @@ GAME
 	{
 		name = Funding
 		scene = 7, 8, 5, 6
-		funds = 4889656.3961311346
+		funds = 3199656.3961311346
 	}
 	SCENARIO
 	{
@@ -3706,7 +3720,7 @@ GAME
 	{
 		name = ResearchAndDevelopment
 		scene = 7, 8, 5, 6
-		sci = 1220.48926
+		sci = 160.489258
 		Tech
 		{
 			id = start
@@ -3740,6 +3754,8 @@ GAME
 			part = stackDecoupler
 			part = longAntenna
 			part = sensorThermometer
+			part = KIS.guide
+			part = KIS.wrench
 		}
 		Tech
 		{
@@ -3789,6 +3805,8 @@ GAME
 			part = mk1dronedoor
 			part = passengeroor
 			part = Mk1JuniorStructural
+			part = KIS.Container1
+			part = KIS.ContainerMount1
 		}
 		Tech
 		{
@@ -3853,6 +3871,7 @@ GAME
 			part = sasModule
 			part = winglet3
 			part = R8winglet
+			part = mumech.MJ2.AR202
 		}
 		Tech
 		{
@@ -3886,6 +3905,8 @@ GAME
 			part = rocketNoseCone
 			part = fairingSize1
 			part = pointyNoseConeA
+			part = KAS.Winch1
+			part = kis.concreteBase1
 		}
 		Tech
 		{
@@ -3917,6 +3938,7 @@ GAME
 			part = radialRCSTank
 			part = landerCabinSmall
 			part = advSasModule
+			part = mumech.MJ2.AR202.features1
 		}
 		Tech
 		{
@@ -3964,6 +3986,7 @@ GAME
 			part = zeroprop
 			part = shortboom
 			part = shortboomb
+			part = noseconemk1
 		}
 		Tech
 		{
@@ -4014,6 +4037,9 @@ GAME
 			part = trussAdapter
 			part = fairingSize2
 			part = pointyNoseConeB
+			part = KAS.Pylon1
+			part = KAS.Strut1
+			part = KIS.Container3
 		}
 		Tech
 		{
@@ -4044,6 +4070,7 @@ GAME
 			part = RCSFuelTank
 			part = rcsTankMini
 			part = RCSTank1-2
+			part = KAS.CPort1
 		}
 		Tech
 		{
@@ -4054,6 +4081,7 @@ GAME
 			part = vernierEngine
 			part = asasmodule1-2
 			part = avionicsNoseCone
+			part = KAS.Hook.Anchor
 		}
 		Tech
 		{
@@ -4075,6 +4103,7 @@ GAME
 			part = telescopicLadder
 			part = Large.Crewed.Lab
 			part = SCANsat.Scanner24
+			part = KIS.evapropellant
 		}
 		Tech
 		{
@@ -4088,6 +4117,7 @@ GAME
 			part = solarPanels1
 			part = solarPanels4
 			part = solarPanels2
+			part = KIS.electricScrewdriver
 		}
 		Tech
 		{
@@ -4110,6 +4140,62 @@ GAME
 			part = strutCube
 			part = structuralMiniNode
 			part = probeCoreHex
+			part = KIS.bomb1
+		}
+		Tech
+		{
+			id = nuclearPropulsion
+			state = Available
+			cost = 300
+			part = nuclearEngine
+		}
+		Tech
+		{
+			id = unmannedTech
+			state = Available
+			cost = 300
+			part = probeCoreOcto2
+			part = probeCoreCube
+			part = mumech.MJ2.AR202.features3
+		}
+		Tech
+		{
+			id = scienceTech
+			state = Available
+			cost = 300
+			part = sensorAtmosphere
+			part = SurveyScanner
+			part = SurfaceScanner
+		}
+		Tech
+		{
+			id = supersonicFlight
+			state = Available
+			cost = 160
+			part = mk2CargoBayS
+			part = mk2FuselageShortLiquid
+			part = mk2FuselageShortLFO
+			part = mk2SpacePlaneAdapter
+			part = mk2.1m.Bicoupler
+			part = turboJet
+			part = mk2Cockpit.Standard
+			part = structuralWing
+			part = wingStrake
+			part = S2Structural
+			part = size2under
+			part = size2Fuselage
+			part = size2CrewCabin
+			part = mk2mk2h
+			part = mk2hboom
+			part = mk2hLiquid
+			part = mk2hAdapter
+			part = airramp
+			part = hipcockpit
+			part = falconcockpit
+			part = concordecockpit
+			part = airbuscockpit
+			part = f5jet
+			part = raptorjet
 		}
 		Science
 		{
@@ -7057,6 +7143,38 @@ GAME
 		{
 			intact = True
 		}
+		SpaceCenter/ResearchAndDevelopment/Facility/ksp_pad_cylTank
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SmallLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CentralBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/MainBuilding
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/CornerLab
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/WindTunnel
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/Observatory
+		{
+			intact = True
+		}
+		SpaceCenter/ResearchAndDevelopment/Facility/SideLab
+		{
+			intact = True
+		}
 	}
 	SCENARIO
 	{
@@ -7092,7 +7210,7 @@ GAME
 		}
 		SpaceCenter/ResearchAndDevelopment
 		{
-			lvl = 0.5
+			lvl = 1
 		}
 		SpaceCenter/Administration
 		{
@@ -7129,6 +7247,9 @@ GAME
 			Lisdra Kerman = F GENERIC GENERIC
 			Dilwell Kerman = M GENERIC GENERIC
 			Edcal Kerman = M GENERIC GENERIC
+			Philwin Kerman = M GENERIC GENERIC
+			Tezy Kerman = F GENERIC GENERIC
+			Bartfel Kerman = M GENERIC GENERIC
 		}
 		ClassSuits
 		{
@@ -7143,6 +7264,5712 @@ GAME
 	{
 		name = ContractPreLoader
 		scene = 7, 8, 5
+		CONTRACT
+		{
+			guid = 06a7fd67-7eac-48f6-82f4-038236e44162
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1147551919
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 201420,0,69549,973690,69549,493,148,0,68761644.7333672,0,0,0
+			subtype = inner_planets.land
+			title = Do a grand tour of the inner planets
+			description = Our sponser would like to do a tour of the inner planets and land on each planet and then return home
+			synopsis = Fly by the inner planets: Moho, Eve and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = -252402455
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = c3bcfbd6-951e-4247-aad4-6e6b0d79b125
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1975253215
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1956060,67489969.921875,56752,177572,56752,31,94,0,70516284.7933671,0,0,0
+			subtype = Polar Orbital Satellite
+			title = Put a probe in a polar orbit at Duna .
+			description = A few days prior to avoiding a serious accident, new ideas were sought for the way we would frequently be achieving sudden combustion. A group of clerks showed us a hastily scribbled note and we were inevitably certain that we should study satellites and satellites accessories, this is why we're here.
+			synopsis = Put a satellite in orbit around Duna .
+			completedMessage = You did it! We've placed a satellite in orbit around Duna !  This will be a day long remembered.
+			notes = Complete the following:
+			hash = -627667656
+			targetBody = Duna
+			UNIQUE_DATA
+			{
+				uid = String:PolarOrbitalSatellite:Duna
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.OrbitGenerator
+				ORBIT_DETAIL
+				{
+					type = RANDOM_ORBIT
+					ORBIT
+					{
+						SMA = 9270225.3515436053
+						ECC = 0.29968879321728559
+						INC = 90
+						LPE = 187.05856402733298
+						LAN = 258.21864412083227
+						MNA = 1.6720635393820389
+						EPH = 0
+						REF = 6
+					}
+				}
+			}
+			PARAM
+			{
+				name = AlwaysTrue
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VPG_4
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+				title = 
+				notes = 
+				completedMessage = 
+				define = Satellite
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 0
+					maxCrew = 0
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Unmanned
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+						title = Unmanned
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = PolarOrbit_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = 0
+					targetBody = Duna
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 0
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minArgumentOfPeriapsis = 0
+					maxArgumentOfPeriapsis = 0
+					minPeriod = 0
+					displayNotes = True
+					deviationWindow = 3
+					ORBIT
+					{
+						SMA = 9270225.3515436053
+						ECC = 0.29968879321728559
+						INC = 90
+						LPE = 187.05856402733298
+						LAN = 258.21864412083227
+						MNA = 1.6720635393820389
+						EPH = 0
+						REF = 6
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Duna
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+						title = Destination: Duna
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Reach the specified orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Polar Orbital Satellite
+						title = Reach the specified orbit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 76ae0bfa-378e-4175-8d3c-c9cdfe89f6cc
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1882438882
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 2125440,0,76448,1528964,76448,593,183,0,70685664.9533671,0,0,0
+			subtype = inner_planets_and_moons.land
+			title = Do a grand tour of the inner planets and moons
+			description = Our sponser would like to do a tour of the inner planets and moons and land on each planet and then return home
+			synopsis = Fly by the inner planets and moons: Moho, Eve, Gilly and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = 1225677014
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 0a9a99a3-2381-4f95-b167-088895262cac
+			type = ConfiguredContract
+			prestige = 2
+			seed = 33164242
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1965540,0,15787,32264,15787,8,8,0,70525765.0333671,0,0,0
+			subtype = First Return from Orbit
+			title = Orbit a probe and return it safely home
+			description = It is well known that saving Kerbal lives is indeed our sixth or seventh highest priority here at Space Penguins, Inc. We think that coming in below budget may help, that allegedly ended up raising more questions than answers, and we now need your help.
+			synopsis = Send a probe to space and get it into orbit around our homeworld and then get it back
+			completedMessage = You did it! You've successfully gotten a probe into orbit and returned it home
+			notes = Complete the following:
+			hash = -988483130
+			targetBody = Kerbin
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup_0
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+				title = 
+				notes = 
+				completedMessage = 
+				completeInSequence = True
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew_0
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 0
+					maxCrew = 0
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Unmanned
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+						title = Unmanned
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = Orbit
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+					title = 
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = False
+					situation = ORBITING
+					targetBody = Kerbin
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 0
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minArgumentOfPeriapsis = 0
+					maxArgumentOfPeriapsis = 360
+					minPeriod = 0
+					displayNotes = False
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Kerbin
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+						title = Destination: Kerbin
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Situation: Orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+						title = Situation: Orbit
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.First Return from Orbit
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 18efe5f8-81c5-4625-a974-ce4abd538f8b
+			type = ConfiguredContract
+			prestige = 1
+			seed = 2079547424
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 2037300,0,81456,6964477,81456,3200,786,0,70597525.0733671,0,0,0
+			subtype = all_planets_and_moons
+			title = Do a grand tour of all the planets and moons
+			description = Our sponser would like to do a tour of all the planets and moons and then return home
+			synopsis = Fly by all the planets and moons: Mun, Minmus, Moho, Eve, Gilly, Duna, Ike, Dres, Jool, Laythe, Vall, Tylo, Bop, Pol
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 1526039303
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets_and_moons
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets_and_moons
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Mun
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: the Mun
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: the Mun
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Minmus
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Minmus
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Minmus
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 2fb447b1-8128-413f-adcd-58eb5cd54960
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1691398248
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 944100,0,78048,3121912,78048,1231,484,0,69504325.1733671,0,0,0
+			subtype = all_planets
+			title = Do a grand tour of all the planets
+			description = Our sponser would like to do a tour of all the planets and then return home
+			synopsis = Fly by all the planets: Moho, Eve, Duna, Dres, Jool, Eeloo
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 588144712
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = fb4e858d-6a1f-43d2-93e5-d85be86784e7
+			type = ConfiguredContract
+			prestige = 1
+			seed = 816711738
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1879800,0,85459,3503832,85459,1536,265,0,70440025.413367,0,0,0
+			subtype = all_planets.land
+			title = Do a grand tour of all the planets
+			description = Our sponser would like to do a tour of all the planets and land on each planet and then return home
+			synopsis = Fly by all the planets: Moho, Eve, Duna, Dres, Jool, Eeloo and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = 1114686953
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = eb558051-3de3-4ea4-b45b-10e7db527b53
+			type = ConfiguredContract
+			prestige = 1
+			seed = 440630276
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 162720,0,85287,1620449,85287,485,227,0,68722945.453367,0,0,0
+			subtype = inner_planets_and_moons
+			title = Do a grand tour of the inner planets and moons
+			description = Our sponser would like to do a tour of the inner planets and moons and then return home
+			synopsis = Fly by the inner planets and moons: Moho, Eve, Gilly
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 1856785425
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets_and_moons
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets_and_moons
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets_and_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets_and_moons
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets_and_moons
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = c393a85f-9eb0-4c62-b2cd-b57bfb6fdebe
+			type = ConfiguredContract
+			prestige = 1
+			seed = 57402521
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 569520,0,73006,4672354,73006,2260,585,0,69129745.493367,0,0,0
+			subtype = outer_planets_with_moons.land
+			title = Do a grand tour of the outer planets with moons
+			description = Our sponser would like to do a tour of the outer planets with moons and land on each planet and then return home
+			synopsis = Fly by the outer planets with moons: Duna, Ike, Dres, Jool, Laythe, Vall, Tylo, Bop, Pol and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = -1879126989
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = a1b95f58-ecfa-4baa-917e-30589c5196ea
+			type = ConfiguredContract
+			prestige = 1
+			seed = 783649328
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 2102100,0,76542,6620853,76542,2228,919,0,70662325.533367,0,0,0
+			subtype = all_planets_and_moons.land
+			title = Do a grand tour of all the planets and moons
+			description = Our sponser would like to do a tour of all the planets and moons and land on each planet and then return home
+			synopsis = Fly by all the planets and moons: Mun, Minmus, Moho, Eve, Gilly, Duna, Ike, Dres, Jool, Laythe, Vall, Tylo, Bop, Pol and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = -1696608661
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Mun
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: the Mun
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: the Mun
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Mun
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: the Mun
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: the Mun
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Minmus
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Minmus
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Minmus
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Minmus
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Minmus
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Minmus
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Gilly
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Gilly
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Gilly
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.all_planets_and_moons.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = d5a38670-f06c-464f-9337-4950fe3028ec
+			type = ConfiguredContract
+			prestige = 1
+			seed = 845171044
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1936500,0,76830,998793,76830,342,100,0,70496725.573367,0,0,0
+			subtype = inner_planets
+			title = Do a grand tour of the inner planets
+			description = Our sponser would like to do a tour of the inner planets and then return home
+			synopsis = Fly by the inner planets: Moho, Eve
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 889584908
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.inner_planets
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Moho
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Moho
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets
+							title = Destination: Moho
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.inner_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eve
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eve
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.inner_planets
+							title = Destination: Eve
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.inner_planets
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 2e34e1de-8a20-4a4c-b27e-8e3799791a86
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1181425541
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1006860,0,71021,1988586,71021,950,216,0,69567085.613367,0,0,0
+			subtype = outer_planets
+			title = Do a grand tour of the outer planets
+			description = Our sponser would like to do a tour of the outer planets and then return home
+			synopsis = Fly by the outer planets: Duna, Dres, Jool, Eeloo
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 1821181860
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 28a7543a-d875-4e2b-a9db-8758252a1380
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1276352388
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 599520,0,82356,5188459,82356,2206,709,0,69159745.653367,0,0,0
+			subtype = outer_planets_with_moons
+			title = Do a grand tour of the outer planets with moons
+			description = Our sponser would like to do a tour of the outer planets with moons and then return home
+			synopsis = Fly by the outer planets with moons: Duna, Ike, Dres, Jool, Laythe, Vall, Tylo, Bop, Pol
+			completedMessage = You did it! You've successly flown by each planet
+			notes = Complete the following:
+			hash = 107167071
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets_with_moons
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets_with_moons
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Ike
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Ike
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Ike
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Laythe
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Laythe
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Laythe
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Vall
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Vall
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Vall
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Tylo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Tylo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Tylo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Bop
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Bop
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Bop
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets_with_moons
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Pol
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Pol
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets_with_moons
+							title = Destination: Pol
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets_with_moons
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 7f62fe38-8ffa-4a47-a3e9-80abeab16f7c
+			type = ConfiguredContract
+			prestige = 1
+			seed = 1291578449
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = None
+			expiryType = Floating
+			ignoresWeight = True
+			values = 2092020,0,72082,2090384,72082,949,342,0,70652245.693367,0,0,0
+			subtype = outer_planets.land
+			title = Do a grand tour of the outer planets
+			description = Our sponser would like to do a tour of the outer planets and land on each planet and then return home
+			synopsis = Fly by the outer planets: Duna, Dres, Jool, Eeloo and land on each planet
+			completedMessage = You did it! You've successly flown by each planet and land on each planet
+			notes = Complete the following:
+			hash = 1049907736
+			PARAM
+			{
+				name = HasCrew
+				id = HasCrew
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				allowStateReset = True
+				minCrew = 1
+				maxCrew = 2147483647
+				minExperience = 0
+				maxExperience = 5
+				PARAM
+				{
+					name = CountParameterDelegate`1
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets.land
+					title = Count: At least 1
+					notes = 
+					completedMessage = 
+				}
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VesselParameterGroup
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGGrandTours.outer_planets.land
+				title = 
+				notes = 
+				completedMessage = 
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = All
+					id = All
+					state = Incomplete
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets.land
+					title = Do these things
+					notes = 
+					completedMessage = 
+					PARAM
+					{
+						name = ReachState
+						id = Flying
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = True
+						targetBody = Kerbin
+						situation = FLYING
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Kerbin
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Kerbin
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Flying
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Situation: Flying
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Duna
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Duna
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Duna
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Dres
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Dres
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Dres
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Jool
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Jool
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Jool
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+					}
+					PARAM
+					{
+						name = ReachState
+						id = ReachState
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGGrandTours.outer_planets.land
+						title = 
+						notes = 
+						completedMessage = 
+						allowStateReset = False
+						targetBody = Eeloo
+						situation = LANDED
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Destination: Eeloo
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Destination: Eeloo
+							notes = 
+							completedMessage = 
+						}
+						PARAM
+						{
+							name = ParameterDelegate`1
+							id = Situation: Landed
+							state = Incomplete
+							disableOnStateChange = False
+							values = 0,0,0,0,0
+							ContractIdentifier = STGGrandTours.outer_planets.land
+							title = Situation: Landed
+							notes = 
+							completedMessage = 
+						}
+					}
+				}
+				PARAM
+				{
+					name = ReturnHome
+					id = ReturnHome
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGGrandTours.outer_planets.land
+					title = Land or splashdown on Kerbin
+					notes = 
+					completedMessage = 
+					completeInSequence = True
+					allowStateReset = True
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 11524d02-bc18-4d50-9495-932e79107db0
+			type = ConfiguredContract
+			prestige = 0
+			seed = 106784128
+			state = Offered
+			viewed = Unseen
+			agent = SCAN: Scientific Committee on Advanced Navigation
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 89460,13062188.671875,4081,85606,16473,0,2,2,68649690.353366,0,0,0
+			subtype = SCAN_Biome
+			title = Do a Biome Scan of the Mun
+			description = It is well known that meeting safety standards is pretty our sixth or seventh highest priority here at SCAN: Scientific Committee on Advanced Navigation. We think that coming in below budget may help, as a result of that apparently nice chain of events, you need to shed a light on things.
+			synopsis = Perform a MultiSpectral scan of the Mun
+			completedMessage = Stunning, through the advances with this scanner we have identified several different biomes for further study.
+			notes = Scanning can take place while the vessel is not loaded.
+			hash = -2088779089
+			targetBody = Mun
+			UNIQUE_DATA
+			{
+				targetBody2 = CelestialBody:Mun
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = ScanSatOfficial.SCAN_Biome
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 75
+				scanName = Biome
+				scanType = 8
+				targetBody = Mun
+			}
+		}
+		CONTRACT
+		{
+			guid = 4e579125-513c-4820-9c3d-16eaae45756e
+			type = ConfiguredContract
+			prestige = 0
+			seed = 498515856
+			state = Offered
+			viewed = Unseen
+			agent = SCAN: Scientific Committee on Advanced Navigation
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 24960,20107027.8808594,5175,125484,9212,0,2,2,68585190.353366,0,0,0
+			subtype = SCAN_M700
+			title = Scan the Mun for resources
+			description = It's no secret that we weren't making any progress at all towards learning if all Kerbals enjoy feeling weightless. But, for the engineering department violently shaking a brightly-coloured concoction at SCAN: Scientific Committee on Advanced Navigation, that was simply decent. Admittedly, the frequency at which we'd find ourselves underestimating how volatile standard-grade solid rocket fuel really is was how we got into that situation in the first place... In any case, this is where you come in.
+			synopsis = Scan the Mun with the M700 Scanner
+			completedMessage = Look at all those lovely resources. We'll have to get a survey team together!
+			notes = Scanning can take place while the vessel is not loaded.
+			hash = -1213295239
+			targetBody = Mun
+			UNIQUE_DATA
+			{
+				targetBody4 = CelestialBody:Mun
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = ScanSatOfficial.SCAN_M700
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 75
+				scanName = FuzzyResources
+				scanType = 524288
+				targetBody = Mun
+			}
+		}
+		CONTRACT
+		{
+			guid = 71d0c086-fe04-4656-8995-c424d9b0d539
+			type = ConfiguredContract
+			prestige = 0
+			seed = 306048049
+			state = Offered
+			viewed = Unseen
+			agent = SCAN: Scientific Committee on Advanced Navigation
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 96240,9511454.00390625,3834,59312,13797,0,1,1,68656470.353366,0,0,0
+			subtype = SCAN_Biome
+			title = Do a Biome Scan of Kerbin
+			description = A lab-suited employee pushing the boundaries of Kerbal understanding felt apparently unsure about whether it was definitely hard for us to tell if stupid Kerbals are more easily entertained than less stupid ones. It is true that doing really dangerous things with goo was a big part of why. Be that as it may, you need to find out if things work as they should
+			synopsis = Perform a MultiSpectral scan of Kerbin
+			completedMessage = Stunning, through the advances with this scanner we have identified several different biomes for further study.
+			notes = Scanning can take place while the vessel is not loaded.
+			hash = -2088779089
+			targetBody = Kerbin
+			UNIQUE_DATA
+			{
+				targetBody2 = CelestialBody:Kerbin
+			}
+			PARAM
+			{
+				name = SCANsatCoverage
+				id = SCANsatCoverage
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = ScanSatOfficial.SCAN_Biome
+				title = 
+				notes = 
+				completedMessage = 
+				coverage = 75
+				scanName = Biome
+				scanType = 8
+				targetBody = Kerbin
+			}
+		}
+		CONTRACT
+		{
+			guid = 20959b0f-64b1-49ed-aaf7-eadfea3a8296
+			type = ConfiguredContract
+			prestige = 1
+			seed = 800536210
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1625400,67489969.921875,65036,184723,65036,31,94,0,70185754.93334,0,0,0
+			subtype = Equatorial OrbitalSat
+			title = Orbit the first satellite in an equatorial orbit around Duna .
+			description = A visitor from Space Penguins, Inc remained unsure if those features on Duna still look like canals from up close. Now, you should find out why things aren't working as they should
+			synopsis = Put a satellite in orbit around Duna .
+			completedMessage = You did it! We've placed a satellite in orbit around Duna !  This will be a day long remembered.
+			notes = Complete the following:
+			hash = 767845856
+			targetBody = Duna
+			UNIQUE_DATA
+			{
+				uid = String:EquatorialOrbitalSatellite:Duna
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.OrbitGenerator
+				ORBIT_DETAIL
+				{
+					type = RANDOM_ORBIT
+					ORBIT
+					{
+						SMA = 2552952.207020971
+						ECC = 0.12461639749700167
+						INC = 0
+						LPE = 132.79598254502864
+						LAN = 64.34483196916608
+						MNA = -1.5163540083151825
+						EPH = 0
+						REF = 6
+					}
+				}
+			}
+			PARAM
+			{
+				name = AlwaysTrue
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VPG_4
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+				title = 
+				notes = 
+				completedMessage = 
+				define = Satellite
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 0
+					maxCrew = 0
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Unmanned
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+						title = Unmanned
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = EquatorialOrbit_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = 0
+					targetBody = Duna
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 0
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minArgumentOfPeriapsis = 0
+					maxArgumentOfPeriapsis = 0
+					minPeriod = 0
+					displayNotes = True
+					deviationWindow = 3
+					ORBIT
+					{
+						SMA = 2552952.207020971
+						ECC = 0.12461639749700167
+						INC = 0
+						LPE = 132.79598254502864
+						LAN = 64.34483196916608
+						MNA = -1.5163540083151825
+						EPH = 0
+						REF = 6
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Duna
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+						title = Destination: Duna
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Reach the specified orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Equatorial OrbitalSat
+						title = Reach the specified orbit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
+		CONTRACT
+		{
+			guid = 0032f6cf-314b-4727-9bb0-da8216c197de
+			type = ConfiguredContract
+			prestige = 1
+			seed = 441988451
+			state = Offered
+			viewed = Unseen
+			agent = Space Penguins, Inc
+			deadlineType = Floating
+			expiryType = Floating
+			ignoresWeight = True
+			values = 1823640,39007358.7890625,66171,184319,66171,31,94,0,70383995.8533398,0,0,0
+			subtype = Kolniya Orbital Satellite
+			title = Orbit the first satellite in a Kolniya orbit around Eve .
+			description = Scientists at Space Penguins, Inc couldn't have been less impressed with how our records showed an unusual amount of neglecting to extend the solar panels. Anyhow, somebody should probably prove them wrong.
+			synopsis = Put a satellite in orbit around Eve .
+			completedMessage = You did it! We've placed a satellite in orbit around Eve !  This will be a day long remembered.
+			notes = Complete the following:
+			hash = 1167330049
+			targetBody = Eve
+			UNIQUE_DATA
+			{
+				uid = String:KolniyaOrbitalSatellite:Eve
+			}
+			BEHAVIOUR
+			{
+				type = ContractConfigurator.Behaviour.OrbitGenerator
+				ORBIT_DETAIL
+				{
+					type = RANDOM_ORBIT
+					ORBIT
+					{
+						SMA = 6947502.0653024167
+						ECC = 0.88060456949804544
+						INC = 116.59999999999999
+						LPE = 90.000000000000014
+						LAN = 41.588492841268192
+						MNA = 2.3924269925247419
+						EPH = 0
+						REF = 5
+					}
+				}
+			}
+			PARAM
+			{
+				name = AlwaysTrue
+				state = Incomplete
+				disableOnStateChange = False
+				values = 0,0,0,0,0
+			}
+			PARAM
+			{
+				name = VesselParameterGroup
+				id = VPG_4
+				state = Incomplete
+				values = 0,0,0,0,0
+				ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+				title = 
+				notes = 
+				completedMessage = 
+				define = Satellite
+				duration = 0
+				dissassociateVesselsOnContractFailure = True
+				dissassociateVesselsOnContractCompletion = False
+				PARAM
+				{
+					name = HasCrew
+					id = HasCrew_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					minCrew = 0
+					maxCrew = 0
+					minExperience = 0
+					maxExperience = 5
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Unmanned
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+						title = Unmanned
+						notes = 
+						completedMessage = 
+					}
+				}
+				PARAM
+				{
+					name = OrbitParameter
+					id = KolniyaOrbit_4
+					state = Incomplete
+					disableOnStateChange = False
+					values = 0,0,0,0,0
+					ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+					title = 
+					notes = 
+					completedMessage = 
+					allowStateReset = True
+					situation = 0
+					targetBody = Eve
+					minAltitude = 0
+					minApoapsis = 0
+					minPeriapsis = 0
+					minEccentricity = 0
+					minInclination = 0
+					maxInclination = 180
+					minArgumentOfPeriapsis = 0
+					maxArgumentOfPeriapsis = 0
+					minPeriod = 0
+					displayNotes = True
+					deviationWindow = 3
+					ORBIT
+					{
+						SMA = 6947502.0653024167
+						ECC = 0.88060456949804544
+						INC = 116.59999999999999
+						LPE = 90.000000000000014
+						LAN = 41.588492841268192
+						MNA = 2.3924269925247419
+						EPH = 0
+						REF = 5
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Destination: Eve
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+						title = Destination: Eve
+						notes = 
+						completedMessage = 
+					}
+					PARAM
+					{
+						name = ParameterDelegate`1
+						id = Reach the specified orbit
+						state = Incomplete
+						disableOnStateChange = False
+						values = 0,0,0,0,0
+						ContractIdentifier = STGUnmannedMissions.Kolniya Orbital Satellite
+						title = Reach the specified orbit
+						notes = 
+						completedMessage = 
+					}
+				}
+			}
+		}
 	}
 	SCENARIO
 	{
@@ -8735,10 +14562,10 @@ GAME
 	FLIGHTSTATE
 	{
 		version = 1.2.2
-		UT = 68560224.653367177
-		activeVessel = 17
+		UT = 68560390.433332592
+		activeVessel = 0
 		mapViewFiltering = 4106
-		commNetUIModeTracking = VesselLinks
+		commNetUIModeTracking = Network
 		commNetUIModeFlight = VesselLinks
 		VESSEL
 		{
@@ -8769,13 +14596,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 300015.19796287938
-				ECC = 0.99999999999999989
-				INC = 85.190905635045212
+				SMA = NaN
+				ECC = 1
+				INC = 85.190905635091994
 				LPE = 270
-				LAN = 100.99953225930454
-				MNA = 3.1415926207170166
-				EPH = 68560145.35338372
+				LAN = 104.83584724468341
+				MNA = 0
+				EPH = 68560374.993335813
 				REF = 1
 			}
 			PART
@@ -10385,13 +16212,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 102069.2118072186
+				SMA = 102069.21180720448
 				ECC = 0.99999999999999989
-				INC = 57.027223767285641
+				INC = 57.027223767297919
 				LPE = 270
-				LAN = 253.56435879070543
-				MNA = -3.1415926207170166
-				EPH = 68560145.35338372
+				LAN = 254.15917660211863
+				MNA = 3.1415926207170166
+				EPH = 68560374.993335813
 				REF = 2
 			}
 			PART
@@ -17226,11 +23053,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 24.983590938795903
+				INC = 24.98359093875774
 				LPE = 90
-				LAN = 98.550581859399358
+				LAN = 99.577543135857468
 				MNA = 0
-				EPH = 68560145.35338372
+				EPH = 68560374.993335813
 				REF = 5
 			}
 			PART
@@ -17577,11 +23404,11 @@ GAME
 			{
 				SMA = NaN
 				ECC = 1
-				INC = 79.999756225832414
+				INC = 79.999756225833366
 				LPE = 270
-				LAN = 154.37752705764763
+				LAN = 155.40448833345158
 				MNA = 0
-				EPH = 68560145.35338372
+				EPH = 68560374.993335813
 				REF = 5
 			}
 			PART
@@ -17777,13 +23604,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 350162.01005488267
+				SMA = 350162.01005484647
 				ECC = 0.99999999999999989
-				INC = 79.999604177136291
+				INC = 79.999604177169914
 				LPE = 270
-				LAN = 154.37615763682243
+				LAN = 155.40311891355714
 				MNA = 3.1415926207170166
-				EPH = 68560145.35338372
+				EPH = 68560374.993335813
 				REF = 5
 			}
 			PART
@@ -17979,13 +23806,13 @@ GAME
 			cMod = -1
 			ORBIT
 			{
-				SMA = 0
-				ECC = 1
-				INC = 79.999921828067116
+				SMA = 350162.20607128594
+				ECC = 0.99999999999999989
+				INC = 79.999921828176028
 				LPE = 270
-				LAN = 154.37784176359469
-				MNA = 0
-				EPH = 68560145.35338372
+				LAN = 155.40480303919639
+				MNA = -3.1415926207170166
+				EPH = 68560374.993335813
 				REF = 5
 			}
 			PART
@@ -18532,8 +24359,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = True
-			cPch = 0.8400002
-			cHdg = 2.548001
+			cPch = 
+			cHdg = 
 			cMod = 0
 			ORBIT
 			{
@@ -22787,21 +28614,21 @@ GAME
 		Kerbaltek = True
 		[x] Science! = True
 		EasyBoard v1.3.0.0 = False
-		EasyVesselSwitch v1.2.0.0 / v1.2.0 for KSP v1.2 = False
-		KSPDev_Utils.0.19.0 v0.19.0.0 / v0.19.0 for KSP v1.2 = False
+		EasyVesselSwitch v1.2.0.0 / v1.2.0 for KSP v1.2 = True
+		KSPDev_Utils.0.19.0 v0.19.0.0 / v0.19.0 for KSP v1.2 = True
 		EasyBoard = True
-		EasyVesselSwitch = False
-		ModuleManager v2.7.2.0 = False
+		EasyVesselSwitch = True
+		ModuleManager v2.7.2.0 = True
 		ReentryParticleEffect v1.2.0.0 = True
-		Trajectories v1.6.5.0 = False
+		Trajectories v1.6.5.0 = True
 		ReentryParticleEffect = True
 		Trajectories = True
-		ModuleManager-License.txt = False
-		ModuleManager.2.7.1.dll = False
-		ModuleManager.ConfigCache = False
-		ModuleManager.ConfigSHA = False
-		ModuleManager.Physics = False
-		ModuleManager.TechTree = False
+		ModuleManager-License.txt = True
+		ModuleManager.2.7.1.dll = True
+		ModuleManager.ConfigCache = True
+		ModuleManager.ConfigSHA = True
+		ModuleManager.Physics = True
+		ModuleManager.TechTree = True
 		ModuleManager.2.6.13 v2.6.13.0 = False
 		Atmosphere v1.5.5834.18391 / v1.0.0.0 = False
 		CelestialShadows v1.5.5834.18391 / v1.0.0.0 = False
@@ -22822,7 +28649,7 @@ GAME
 		KopernicusExpansion = False
 		KSPRC = False
 		PlanetShine = True
-		scatterer = False
+		scatterer = True
 		TextureReplacer = True
 		ModuleManager.2.6.13.dll = False
 		ModuleManager.2.7.5 v2.7.5.0 = True
@@ -22837,7 +28664,7 @@ GAME
 		TextureConfig v1.5.6131.22338 / v1.0.0.0 = True
 		Utils v1.5.6131.22337 / v1.0.0.0 = True
 		_BuildManager v1.5.6131.22338 / v1.0.0.0 = True
-		ModularFlightIntegrator v1.0.0.0 / v1.2.3.0 = True
+		ModularFlightIntegrator v1.0.0.0 / v1.2.3.0 = False
 		Kopernicus.Components v1.0.0.0 = True
 		Kopernicus v1.0.0.0 = True
 		Kopernicus.Parser v1.0.0.0 = True
@@ -22845,18 +28672,18 @@ GAME
 		scatterer v1.0.6134.38560 = False
 		TextureReplacer v2.5.4.0 = True
 		ModularFlightIntegrator = True
-		StockVisualEnhancements = False
+		StockVisualEnhancements = True
 		SVEKopernicus = True
 		ModuleManager.2.7.5.dll = True
 		EasyBoard v1.4.0.0 = True
-		.DS_Store = True
-		Trajectories v1.6.6.0 = True
+		.DS_Store = False
+		Trajectories v1.6.6.0 = False
 		EVAEnhancementsContinued v1.1.1.0 = False
 		EVAEnhancementsContinued = True
 		ksp-advanced-flybywire v1.1.0.0 = False
 		XInputDotNetPure v1.0.0.0 = False
-		000_Toolbar = False
-		BoulderCo = True
+		000_Toolbar = True
+		BoulderCo = False
 		JatwaaDemolitionsCo = True
 		ksp-advanced-flybywire = False
 		BetterBurnTime v1.0.0.0 = True
@@ -22868,18 +28695,18 @@ GAME
 		AirplanePlus = True
 		Firespitter = True
 		KSC = True
-		aaa_Toolbar v1.0.0.0 / v1.7.13.0 = False
+		aaa_Toolbar v1.0.0.0 / v1.7.13.0 = True
 		ContractConfigurator v1.0.0.0 / v1.22.2 = True
 		EVAEnhancementsContinued v0.1.4.0 / v1.1.1.0 = False
 		RasterPropMonitor v0.28.0.18220 = True
 		SCANsat v1.6.0.11 / vv16.11 = True
-		scatterer v1.0.6231.33139 = False
-		WhoAmI v1.0.2.0 = False
+		scatterer v1.0.6231.33139 = True
+		WhoAmI v1.0.2.0 = True
 		ContractConfigurator = True
 		JSI = True
 		SCANsat = True
-		WhoAmI = False
-		toolbar-settings.dat = False
+		WhoAmI = True
+		toolbar-settings.dat = True
 		UnmannedContracts v1.0.5980.31793 = True
 		CoherentContracts = True
 		ContractPacks = True
@@ -22895,7 +28722,20 @@ GAME
 		PlanetaryBaseInc = False
 		REPOSoftTech = False
 		EVAEnhancementsContinued v0.1.8.0 / v1.1.1.0 = True
-		[x] Science! v5.5.6277.20901 = True
+		[x] Science! v5.5.6277.20901 = False
+		KAS v0.6.2.0 / v0.6.2 for KSP 1.2 = True
+		MiniAVC v1.0.3.1 = True
+		KIS v1.4.3.0 / v1.4.3 for KSP 1.2 = True
+		KSPDev_Utils.0.20.0 v0.20.0.0 / v0.20.0 for KSP v1.2 = True
+		KAS = True
+		KIS = True
+		FMRS v1.2.3.1 / v1.0.2.0 = True
+		ModularFlightIntegrator v1.0.0.0 / v1.2.4.0 = True
+		MechJeb2 v2.5.1.0 / v / v2.6.0.0 = True
+		[x] Science! v5.6.6303.22012 = True
+		FMRS = True
+		MechJeb2 = True
+		MechJebAndEngineerForAll.cfg = True
 	}
 	ROSTER
 	{
@@ -23783,13 +29623,5 @@ GAME
 	MESSAGESYSTEM
 	{
 		flash = False
-		MESSAGE
-		{
-			title = World First Milestones
-			message = The recent accomplishments of our space program have attracted contributions from numerous organizations!~n~nWe have initiated the first fly by of Duna.~n<color=#b4d455><sprite=2 tint=1>  44,411 <color=#caff00>(+411)</color> </color><color=#6dcff6><sprite=1 tint=1> 2 </color><color=#e0d503><sprite=0 tint=1> 4 </color>~n~nWe have gathered the first scientific data from Duna.~n<color=#b4d455><sprite=2 tint=1>  21,326 <color=#caff00>(+206)</color> </color><color=#6dcff6><sprite=1 tint=1> 1 </color><color=#e0d503><sprite=0 tint=1> 2 </color>~n~nWe have initiated the first fly by of Ike.~n<color=#b4d455><sprite=2 tint=1>  44,411 <color=#caff00>(+411)</color> </color><color=#6dcff6><sprite=1 tint=1> 2 </color><color=#e0d503><sprite=0 tint=1> 4 </color>~n~nWe have escaped the gravitational influence of Duna.~n<color=#b4d455><sprite=2 tint=1>  31,988 <color=#caff00>(+308)</color> </color><color=#6dcff6><sprite=1 tint=1> 1 </color><color=#e0d503><sprite=0 tint=1> 3 </color>~n~nWe have escaped the gravitational influence of Ike.~n<color=#b4d455><sprite=2 tint=1>  31,988 <color=#caff00>(+308)</color> </color><color=#6dcff6><sprite=1 tint=1> 1 </color><color=#e0d503><sprite=0 tint=1> 3 </color>~n~nWe have gathered the first scientific data from Ike.~n<color=#b4d455><sprite=2 tint=1>  21,326 <color=#caff00>(+206)</color> </color><color=#6dcff6><sprite=1 tint=1> 1 </color><color=#e0d503><sprite=0 tint=1> 2 </color>~n~nWe have entered orbit of Ike.~n<color=#b4d455><sprite=2 tint=1>  42,651 <color=#caff00>(+411)</color> </color><color=#6dcff6><sprite=1 tint=1> 2 </color><color=#e0d503><sprite=0 tint=1> 4 </color>~n~nWe have entered orbit of Duna.~n<color=#b4d455><sprite=2 tint=1>  42,651 <color=#caff00>(+411)</color> </color><color=#6dcff6><sprite=1 tint=1> 2 </color><color=#e0d503><sprite=0 tint=1> 4 </color>~n
-			color = 3
-			icon = 6
-			read = False
-		}
 	}
 }
